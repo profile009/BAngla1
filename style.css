@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, 
+    #09A603 0%, 
+    #055902 25%, 
+    #022601 50%, 
+    #AFF21D 75%, 
+    #F20505 100%);
+    
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.option-btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.option-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #e6f7ff;
+}
+
+.option-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-bottom: 10px;
+    border: 3px solid #4CAF50;
+}
+
+.option-btn span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Page specific styles */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.back-btn {
+    background-color: #0ff3e8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.back-btn:hover {
+    background-color: #d32f2f;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.poem-card {
+    grid-column: span 2;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff9c4;
+}
+
+.math-problem {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.math-solution {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .button-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .option-btn span {
+        font-size: 1rem;
+    }
+}
